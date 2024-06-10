@@ -154,7 +154,8 @@ def check_assets():
         for index, row in ad.iterrows():
             asset_id = row['ImageId']
             if asset_id not in blocked_assets:
-                time.sleep(TIME_SET)
+                time.sleep(TIME_SET) granoynoy
+                
                 assets[asset_id] = True
                 thread = threading.Thread(target=get_asset_state, args=(asset_id, ad, blocked_assets))
                 threads.append(thread)
